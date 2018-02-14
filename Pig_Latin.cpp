@@ -6,6 +6,7 @@
 //  Copyright © 2018 Christian Barrera. All rights reserved.
 //
 
+// **Author's notes to self**
 // For loop through all characters to find ' ' spaces (and could count number of letters)
 // maybe create an array of each word string
 // Create a variable that counts the number of words
@@ -21,7 +22,7 @@ using namespace std;
 
 string getName();
 
-string reverseName(string name); // function to return pig latin name
+string reverseName(string name);
 
 void printName(string word, string name);
 
@@ -30,17 +31,17 @@ int main() {
     string word = getName();
     string reversed = reverseName(word);
     printName(word, reversed);
-
+    
     cout << endl;
     return 0;
 }
 
 
 
-string getName()
+string getName()    // function to prompt user to get name
 {
-//    string word = "barrEra";
-//    string reversed;
+    //    string word = "barrEra";
+    //    string reversed;
     cout << "Please input a word: ";
     string word;
     cin >> word;
@@ -48,7 +49,7 @@ string getName()
     return word;
 }
 
-string reverseName(string name) // function to return
+string reverseName(string name) // function to return pig latin name
 {
     string reversed;
     
@@ -62,9 +63,9 @@ string reverseName(string name) // function to return
         }
         if ((reversed[i] > 64 && reversed[i] < 91) ^ (name[i] > 64 && name[i] < 91)) {
             reversed[i] = reversed[i] + 32;
-        
-        }
             
+        }
+        
     }
     
     return reversed;
@@ -79,3 +80,4 @@ void printName(string word, string reversed)  // function to print reversed stri
     cout << "ay ";  // add "ay" for pig latin exercise
     
 }
+
