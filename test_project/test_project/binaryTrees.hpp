@@ -10,5 +10,5 @@
 #define binaryTrees_hpp
 
 #include <stdio.h>
-
+short CountBits(unsigned int x);
 #endif /* binaryTrees_hpp */
